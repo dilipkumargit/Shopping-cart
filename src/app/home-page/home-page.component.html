@@ -1,0 +1,23 @@
+<div class="terms_box" class="imagebg" *ngIf="!showCartInfo">
+  <h1 class="title_login1">List of products</h1>
+  <div class="terms_box">
+    <div style="background-color:rgb(255, 255, 255)" style="font-family:verdana" *ngFor="let dataDisplay of data.read_data | groupBy:'TYPE' ">
+      <div class="font col-md-12"> Brand : {{dataDisplay.key}} </div>
+      <ul style="list-style-type:none" class="display col-md-4" *ngFor="let currentData of dataDisplay.value">
+        <li class="font1">
+          <img width="150px" height="150px" [src]="'../../assets/images/' + currentData.NAME + '.jpg'">
+        </li>
+        <li class="font1">{{currentData.LABEL}}</li>
+        <li class="font1">${{currentData.PRICE}}</li>
+        <button class="logout  ui green button" (click)="getData(currentData)">Buy</button>
+        <button class="logout  ui blue button" *ngIf="!currentData.hideAddToCart" (click)="addItemToCart(currentData)">Add to Cart</button>
+      </ul>
+    </div>
+  </div>
+  <button class="cart ui blue button" (click)="showOrderInfo()">Next</button>
+  <button (click)="logout()" class="ui green button logout topcorner">Logout</button>
+  <button class="topfixed ui blue button" (click)="displayCartDetails()">Cart Info</button>
+</div>
+<app-product-page *ngIf="showCartInfo" [orderDetail]="selectedData"></app-product-page>
+<app-cart-info *ngIf="data.ifcartinfo"></app-cart-info>  
+<button class="topleft ui blue button"  *ngIf="showCartInfo || data.ifcartinfo" (click)="showHomePageInfo()">Back</button>

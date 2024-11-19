@@ -1,0 +1,69 @@
+
+    [
+    {
+        "name": "S4",
+        "label": "Samsung Galaxy S4(Deep Black, 16 GB)",
+        "category": "Brand: SAMSUNG",
+        "prize": "22,000",
+        "buy": "Buy",
+        "cart": "Add to cart",
+        "description": "Description: 5 inch screen, 2300mAh battery, single sim, 8PM rear cam",
+        "quantity": ""
+    },
+    {
+        "name": "S7",
+        "label": "Samsung S7 (Black Pearl, 128GB)",
+        "category": "Brand: SAMSUNG",
+        "prize": "40,000",
+        "buy": "Buy",
+        "cart": "Add to cart",
+        "description": "Description: 5.1 inch screen, 3500mAh battery, single sim, 16PM rear cam",
+        "quantity": ""
+    },
+
+
+    {
+        "name": "S8",
+        "label": "Samsung Galaxy S8(Midnight Black, 64GB)",
+        "category": "Brand: SAMSUNG",
+        "prize": "60,000",
+        "buy": "Buy",
+        "cart": "Add to cart",
+        "description": "Description: 5.5 inch screen, 4000mAh battery, single sim, 23PM rear cam",
+        "quantity": ""
+    },
+
+
+    {
+        "name": "6s",
+        "label": "Apple iPhone 6s(Space Grey, 32GB)",
+        "category": "Brand: IPHONE",
+        "prize": "32,000",
+        "buy": "Buy",
+        "cart": "Add to cart",
+        "description": "Description: 5 inch screen, 2300mAh battery, single sim, 8PM rear cam",
+        "quantity": ""
+    },
+    {
+        "name": "7",
+        "label": "Apple iPhone 7(Black, 32GB)",
+        "category": "Brand: IPHONE",
+        "prize": "48,000",
+        "buy": "Buy",
+        "cart": "Add to cart",
+        "description": "Description: 5 inch screen, 3000mAh battery, single sim, 16PM rear cam",
+        "quantity": ""
+    },
+
+    
+    {
+        "name": "X",
+        "label": "Apple iPhone X(Space Gray, 64GB)",
+        "category": "Brand: IPHONE",
+        "prize": "84,000",
+        "buy": "Buy",
+        "cart": "Add to cart",
+        "description": "Description: 5.5 inch screen, 3500mAh battery, single sim, 16PM rear cam",
+        "quantity": ""
+    }
+]

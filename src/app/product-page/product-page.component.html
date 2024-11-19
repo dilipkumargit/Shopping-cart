@@ -1,0 +1,36 @@
+<div class="imagebg">
+  <div class="terms_box1">
+    <ng-container class="container" style="background-color:rgb(255, 255, 255); list-style-type:none; font-family:verdana" *ngFor="let orderInfo of orderDetail">
+      <img class="col-md-2" width="150px" height="150px" [src]="'../../assets/images/' + orderInfo.NAME + '.jpg'">
+      <div class="col-md-10">
+        <span class="font1 col-md-12"> {{orderInfo.NAME}} </span>
+        <br/>
+        <span class="font1 col-md-12">Name: {{orderInfo.LABEL}} </span>
+        <br/>
+        <span class="font1 col-md-12">Price: {{orderInfo.PRICE}} </span>
+        <br/>
+        <span class="font1 col-md-12">Description: {{orderInfo.DESCRIPTION}} </span>
+        <br/>
+        <span class="font1 col-md-12">
+          Enter Quantity:
+          <input type="number" [(ngModel)]="orderInfo.quantity" name="quantity" (change)="calculateamount(orderInfo,orderInfo.quantity)"
+            width="5"> </span>
+        <br/>
+        <br/>
+      </div>
+    </ng-container>
+  </div>
+  <div class="bottom">
+    <span class="font2">Address:
+      <textarea name="address" style="color:black !important" type="text" [(ngModel)]="deliveryaddress" rows="4" cols="50">
+ </textarea>
+    </span>
+    <br/>
+    <span class="font2">Note: Cash on Delivery</span>
+    <br/>
+    <br/>
+    <button class="ui green button" (click)="submit(orderDetail,deliveryaddress)">Submit</button>
+  </div>
+
+
+</div>

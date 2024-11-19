@@ -1,0 +1,40 @@
+<div class="terms_box" class="imagebg">
+    <h1 class="title_login1">CART INFO</h1>
+    <div class="terms_box">
+        <div *ngIf="data.readdata">
+            <ul style="list-style-type:none" class="display col-md-12">
+                <p class="font1"><b>RECENT ORDERS</b></p>
+                <li class="font1 col-md-2" >
+                    <img width="150px" height="150px" [src]="'../../assets/images/' + data.readdata[0].NAME + '.jpg'">
+                </li>
+            
+                <div class="display col-md-10">
+                <li class="font1">ORDERID:{{data.readdata[0].ORDERID}}</li>
+                <li class="font1">PRICE:${{data.readdata[0].AMOUNT}}</li>
+                <li class="font1">LABEL:{{data.readdata[0].LABEL}}</li>
+               </div>
+            </ul>
+        </div>
+        <p class="font1"><b>PREVIOUS ORDERS</b></p>
+        <accordion [closeOthers]="true" [showArrows]="true">
+            <ng-container *ngFor="let groupedData of data.readdata | groupBy:'ORDERID'">
+                <accordion-group [heading]="groupedData.key" 
+                    *ngIf="groupedData.key !== data.readdata[0].ORDERID">
+                    <div content  *ngFor="let currentData of groupedData.value">
+                        <p>
+                            <img width="150px" height="150px" [src]="'../../assets/images/' + currentData.NAME + '.jpg'">
+                        </p>
+                        <p>QUANTITY:
+                            <code>{{currentData.ITEMCOUNT}}</code> </p>
+                        <p>AMOUNT:
+                            <code>{{currentData.AMOUNT}}</code>
+                        </p>
+                        <p>LABEL:
+                            <code>{{currentData.LABEL}}</code>
+                        </p>
+                    </div>
+                </accordion-group>
+            </ng-container>
+        </accordion>
+    </div>
+</div>

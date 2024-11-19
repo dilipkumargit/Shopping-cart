@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'GEInspiraSans-Regular';
+  src: url('GEInspiraSans-Regular.eot?#iefix') format('embedded-opentype'),  url('GEInspiraSans-Regular.otf')  format('opentype'),
+	     url('GEInspiraSans-Regular.woff') format('woff'), url('GEInspiraSans-Regular.ttf')  format('truetype'), url('GEInspiraSans-Regular.svg#GEInspiraSans-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
